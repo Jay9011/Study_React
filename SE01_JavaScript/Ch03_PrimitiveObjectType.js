@@ -6,6 +6,12 @@ a = 20; // 새로운 값 20을 스택의 다른 위치에 저장되고, a는 이
 console.log(a); // 20
 console.log(b); // 10
 
+// Symbol 타입은 유일한 값을 생성하기 때문에 같은 값을 가지지 않습니다.
+let sym1 = Symbol('description');
+let sym2 = Symbol('description');
+
+console.log(sym1 === sym2); // false
+
 // 객체 타입은 값이 저장된 주소를 참조하기 때문에 새로운 변수에 할당하면 같은 주소를 참조하게 되어 서로 같은 값을 가지게 됩니다.
 let obj1 = {num : 10}; // 힙에 {num : 10}을 저장하고, 스택에서 obj1이 힙의 주소를 참조.
 let obj2 = obj1; // obj1의 주소를 obj2에 복사한다.
