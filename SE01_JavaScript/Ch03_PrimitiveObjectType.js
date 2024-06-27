@@ -68,3 +68,15 @@ console.log(obj4 === obj6); // true : obj6은 obj4와 같은 주소를 참조하
 
 // 깊은 비교
 console.log(JSON.stringify(obj4) === JSON.stringify(obj5)); // true : JSON.stringify()를 사용하여 객체를 문자열로 변환한 뒤 비교
+
+// 객체 타입의 얕은 복사
+// let address = { city: '서울', dong: '역삼동' };
+// let person1 = { name: '홍길동', age: 16, address: address };
+// let person2 = { ...person1 };
+//
+// person1.address.city = '인천';
+// person1.address.dong = '마전동';
+//
+// // person1에 대한 변경만 시도했으나 person2도 같이 변경되어 의도치 않은 변경이 발생하게 된다.
+// console.log(person1); // { name: '홍길동', age: 16, address: { city: '인천', dong: '마전동' } }
+// console.log(person2); // { name: '홍길동', age: 16, address: { city: '인천', dong: '마전동' } }
